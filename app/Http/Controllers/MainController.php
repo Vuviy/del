@@ -2,11 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Additional;
 use App\Models\Article;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Image;
+use App\Models\Lesson;
+use App\Models\Man;
 use App\Models\Profile;
+use App\Models\Rate;
+use App\Models\Student;
+use App\Models\StudentCart;
+use App\Models\StudentLesson;
+use App\Models\Teacher;
 use App\Models\User;
+use App\Models\Women;
+use Illuminate\Database\Eloquent\Builder;
 
 class MainController extends Controller
 {
@@ -14,10 +25,36 @@ class MainController extends Controller
     {
 
 
-        $blog = Blog::find(1);
-        $ar = Article::find(1);
+//        $student = Student::find(38);
+//        $ad = Additional::find(2);
+//        $ad2 = Additional::find(2);
+//        $cart = StudentCart::find(44);
+//        $lesson = Lesson::find(44);
+//        $r = Rate::find(330);
 
-        dump($blog->polyTags);
+//        $man = Women::find(7);
+//        $image = Image::find(1);
+//
+
+
+
+        $teacher = Teacher::find(2);
+//        $student = Student::find(3);
+
+        dump($teacher->lessons);
+//        dump($student->lessons()->create(['title' => 3]));
+
+//        dump($man->image()->create(['url' => 'http//wqrt5tyfhgk']));
+
+//        foreach ($lesson->students as $student){
+//            dump($student->name);
+//            echo "<br>";
+//        }
+
+
+//        $blog = Blog::find(1);
+//        $ar = Article::find(1);
+
 //        dump($blog->polyTags()->create(['title'=> 'gffgfhgfhfh']));
 
 //        $arr = [1,1,1,1,1];
